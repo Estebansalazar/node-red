@@ -1,0 +1,55 @@
+[  
+   {  
+      "id":"a124385f.c46268",
+      "type":"inject",
+      "z":"8164d243.b4fb2",
+      "name":"Translate",
+      "topic":"",
+      "payload":"Hello! My name is Watson and here is an example of a translated text.",
+      "payloadType":"str",
+      "repeat":"",
+      "crontab":"",
+      "once":false,
+      "x":100,
+      "y":80,
+      "wires":[  
+         [  
+            "38ca07f1.af65a8"
+         ]
+      ]
+   },
+   {  
+      "id":"38ca07f1.af65a8",
+      "type":"watson-translate",
+      "z":"8164d243.b4fb2",
+      "name":"",
+      "srclang":"en",
+      "destlang":"fr",
+      "domain":"news",
+      "basemodel":"",
+      "action":"translate",
+      "filetype":"forcedglossary",
+      "trainid":"",
+      "x":400,
+      "y":80,
+      "wires":[  
+         [  
+            "7f2c697a.221228"
+         ]
+      ]
+   },
+   {  
+      "id":"7f2c697a.221228",
+      "type":"debug",
+      "z":"8164d243.b4fb2",
+      "name":"Translated text",
+      "active":true,
+      "console":"false",
+      "complete":"payload",
+      "x":900,
+      "y":80,
+      "wires":[  
+
+      ]
+   }
+]
